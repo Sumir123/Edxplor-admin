@@ -1,0 +1,174 @@
+.sidebar {
+  background-color: $dim_background;
+  max-width: 257px;
+  padding: 16px;
+  color: $text_color;
+  position: fixed;
+  height: 100%;
+  h1 {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 150%;
+    color: $primary_color;
+  }
+  h3 {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 150%;
+    color: $text_color;
+  }
+  .logo {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 32px;
+    padding: 0px 8px;
+  }
+  .menus {
+    .menu_heading {
+      padding: 8px 12px 8px 16px;
+    }
+    .menu_list {
+      .menu_container {
+        &.active {
+          .sub_menu {
+            display: block;
+          }
+          background: #ffffff;
+          p {
+            color: $primary_color;
+          }
+        }
+        .menu {
+          padding: 8px;
+          display: flex;
+          gap: 12px;
+          p {
+            font-weight: 400;
+            font-size: 14px;
+          }
+          .icon1 {
+            display: none;
+            &.active {
+              display: block;
+            }
+          }
+          .uparrow {
+            display: none;
+            margin-left: auto;
+            cursor: pointer;
+            &.active {
+              display: block;
+            }
+          }
+          .downarrow {
+            cursor: pointer;
+            display: none;
+            margin-left: auto;
+            &.active {
+              display: block;
+            }
+          }
+        }
+        .sub_menu {
+          font-weight: 400;
+          font-size: 14px;
+          padding: 8px 12px 8px 40px;
+          display: none;
+          cursor: pointer;
+          &.active {
+            background: $primary_color;
+            color: $white;
+          }
+          &:hover {
+            background: $primary_color;
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+}
+
+.header {
+  margin-left: 257px;
+  display: flex;
+  align-items: center;
+  padding: 4px 24px;
+  background-color: $dim_background;
+  .menu_icon {
+    cursor: pointer;
+  }
+  .last {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+    form {
+      position: relative;
+      margin-right: 16px;
+
+      border-radius: 4px;
+      input[type="text"] {
+        padding: 8px 12px 8px 16px;
+        background: #e9ecef;
+      }
+      ::placeholder {
+        color: #adb5bd;
+      }
+      .searchIcon {
+        position: absolute;
+        right: 12px;
+        top: 6px;
+        cursor: pointer;
+      }
+    }
+    .profile {
+      padding: 12px;
+      cursor: pointer;
+    }
+    .language {
+      padding: 20px 12px;
+      cursor: pointer;
+    }
+  }
+}
+.menu-name_section {
+  margin-left: 257px;
+
+  .menu-name {
+    display: flex;
+    box-shadow: inset 0px -1px 0px #dee2e6;
+    padding: 16px 24px;
+    p {
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 130%;
+      color: $dark_primary;
+    }
+    .menu-last {
+      display: flex;
+      gap: 16px;
+    }
+    .info_icon {
+      background: $primary_color;
+      border-radius: 4px;
+      padding: 4px;
+      width: 24px;
+      height: 24px;
+      display: grid;
+      justify-content: center;
+      cursor: pointer;
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .sidebar {
+    display: none;
+  }
+  .header,
+  .level_section,
+  .menu-name_section {
+    margin-left: 20px !important;
+  }
+}

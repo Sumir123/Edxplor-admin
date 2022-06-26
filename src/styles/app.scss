@@ -1,0 +1,38 @@
+$primary_color: #007296;
+$dark_primary: #0d2344;
+$secondary_color: #e66e19;
+$dim_background: #f8f9fa;
+$text_color: #6c757d;
+$white: #ffffff;
+
+*,
+::after,
+::before {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Segoe UI";
+  color: $text_color;
+}
+button,
+input {
+  border: none;
+  outline: none;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+.row-end {
+  align-items: center;
+  margin-left: auto;
+}
+.link {
+  cursor: pointer;
+  font-weight: 400 !important;
+  font-size: 14px !important;
+}
+@import "./sidebar.scss";
+@import "./level.scss";
