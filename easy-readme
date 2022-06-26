@@ -1,0 +1,8 @@
+Prerequisite:
+-Node must be installed
+
+To run this in your local pc
+In terminal:
+run 'install npm'
+after the instalitation is complete:
+run 'npm start'

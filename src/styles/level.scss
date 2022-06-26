@@ -207,6 +207,12 @@ body {
           border-radius: 4px;
           padding: 8px 16px;
         }
+        select {
+          border: 1px solid #adb5bd;
+          border-radius: 4px;
+          padding: 8px 16px;
+          outline: none;
+        }
         textarea {
           resize: none;
           border: none;

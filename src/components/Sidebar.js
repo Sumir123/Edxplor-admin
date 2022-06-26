@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Sidebar = () => {
+  const [activeMenu, setactiveMenu] = useState("");
+
   const showMenu = () => {
     const menuContainer = document.querySelector("#menuContainer");
     const upArrow = document.querySelector("#upArrow");
@@ -39,18 +42,18 @@ const Sidebar = () => {
             <h3>Master Data</h3>
           </div>
           <div className="menu_list">
-            <div className="menu_container active" id="menuContainer">
+            <div className="menu_container" id="menuContainer">
               <div className="menu">
                 <img
                   src="/images/icon/academic.svg"
                   alt=""
-                  className="icon1"
+                  className="icon1 active"
                   id="icon1"
                 />
                 <img
                   src="/images/icon/academic-primary.svg"
                   alt=""
-                  className="icon1 active"
+                  className="icon1 "
                   id="icon1-primary"
                 />
 
@@ -58,24 +61,108 @@ const Sidebar = () => {
                 <img
                   src="/images/icon/uparrow.svg"
                   alt=""
-                  className="uparrow active"
+                  className="uparrow "
                   id="upArrow"
                   onClick={hideMenu}
                 />
                 <img
                   src="/images/icon/down.svg"
                   alt=""
-                  className="downarrow "
+                  className="downarrow active"
                   id="downArrow"
                   onClick={showMenu}
                 />
               </div>
               <div className="sub_menus">
-                <div className="sub_menu active">Levels</div>
-                <div className="sub_menu">Universities</div>
-                <div className="sub_menu">Boards</div>
-                <div className="sub_menu">Faculties</div>
-                <div className="sub_menu">Programs</div>
+                {activeMenu == "levels" ? (
+                  <div className="sub_menu active" id="levels">
+                    Levels
+                  </div>
+                ) : (
+                  <Link to="/level">
+                    <div
+                      className="sub_menu"
+                      id="levels"
+                      onClick={() => {
+                        setactiveMenu("levels");
+                      }}
+                    >
+                      Levels
+                    </div>{" "}
+                  </Link>
+                )}
+
+                {activeMenu == "universities" ? (
+                  <div className="sub_menu active" id="universities">
+                    Universities
+                  </div>
+                ) : (
+                  <Link to="/university">
+                    <div
+                      className="sub_menu"
+                      id="universities"
+                      onClick={() => {
+                        setactiveMenu("universities");
+                      }}
+                    >
+                      Universities
+                    </div>
+                  </Link>
+                )}
+
+                {activeMenu == "boards" ? (
+                  <div className="sub_menu active" id="boards">
+                    Boards
+                  </div>
+                ) : (
+                  <Link to="/boards">
+                    <div
+                      className="sub_menu"
+                      id="boards"
+                      onClick={() => {
+                        setactiveMenu("boards");
+                      }}
+                    >
+                      Boards
+                    </div>
+                  </Link>
+                )}
+
+                {activeMenu == "faculties" ? (
+                  <div className="sub_menu active" id="faculties">
+                    Faculties
+                  </div>
+                ) : (
+                  <Link to="/faculties">
+                    <div
+                      className="sub_menu"
+                      id="faculties"
+                      onClick={() => {
+                        setactiveMenu("faculties");
+                      }}
+                    >
+                      Faculties
+                    </div>
+                  </Link>
+                )}
+
+                {activeMenu == "programs" ? (
+                  <div className="sub_menu active " id="programs">
+                    Programs
+                  </div>
+                ) : (
+                  <Link to="/programs">
+                    <div
+                      className="sub_menu"
+                      id="programs"
+                      onClick={() => {
+                        setactiveMenu("programs");
+                      }}
+                    >
+                      Programs
+                    </div>
+                  </Link>
+                )}
               </div>
             </div>
             <div className="menu_container">

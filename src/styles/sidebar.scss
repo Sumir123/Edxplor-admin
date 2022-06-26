@@ -163,12 +163,15 @@
 }
 
 @media (max-width: 650px) {
-  .sidebar {
-    display: none;
+  .sidebar,
+  .list {
+    display: none !important;
   }
   .header,
   .level_section,
-  .menu-name_section {
-    margin-left: 20px !important;
+  .menu-name_section,
+  .table_pagination {
+    margin-left: 0px !important;
+    padding-left: 5px !important;
   }
 }

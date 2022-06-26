@@ -1,6 +1,6 @@
 import React from "react";
 
-const Level = () => {
+const Programs = () => {
   const showModal = () => {
     const modal = document.querySelector("#modal");
     const overlay = document.querySelector("#overlay");
@@ -19,7 +19,7 @@ const Level = () => {
     <>
       <div className="level_section">
         <div className="section-name">
-          <p>Level Details</p>
+          <p>Programs Details</p>
         </div>
         <div className="search_bar">
           <form>
@@ -41,6 +41,9 @@ const Level = () => {
                   <input type="checkbox" />
                 </th>
                 <th>Name</th>
+                <th>Abbreviation</th>
+                <th>University</th>
+                <th>Level</th>
                 <th>Description</th>
                 <th>Action</th>
               </tr>
@@ -50,12 +53,11 @@ const Level = () => {
                 <td>
                   <input type="checkbox" />
                 </td>
-                <td>A Level</td>
-                <td>
-                  A-levels are both nationally and internationally recognised
-                  qualifications that are required for entry into many
-                  university courses and professional training opportunities.
-                </td>
+                <td>Bachelor of Computer Application </td>
+                <td>BCA</td>
+                <td>TU </td>
+                <td>Bachelor </td>
+                <td>University with different faculties and levels</td>
                 <td>
                   <img src="/images/icon/3dot.svg" />
                 </td>
@@ -63,7 +65,7 @@ const Level = () => {
             </tbody>
           </table>
           <div className="empty_table">
-            <img src="/images/table_add.svg" alt="" />
+            <img src="/images/table_add3.svg" alt="" />
             <div className="text">
               <h5>No Level Details</h5>
               <p>Please add details to show.</p>
@@ -123,6 +125,20 @@ const Level = () => {
                 <input type="text" />
               </div>
               <div className="form_item">
+                <label> Abbreviation</label>
+                <input type="text" />
+              </div>
+              <div className="form_item">
+                <label> University</label>
+                <input type="text" />
+              </div>
+              <div className="form_item">
+                <label> Levels</label>
+                <select>
+                  <option>Select Level</option>
+                </select>
+              </div>
+              <div className="form_item">
                 <label>Description</label>
                 <textarea />
               </div>
@@ -142,4 +158,4 @@ const Level = () => {
   );
 };
 
-export default Level;
+export default Programs;
