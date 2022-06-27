@@ -193,7 +193,7 @@ ul {
 @media (max-width: 650px) {
   .last form {
     position: absolute;
-    right: 8.5rem;
+    right: 5rem;
   }
   .list {
     display: none !important;
@@ -206,7 +206,7 @@ ul {
   }
   .menu_icon {
     position: absolute;
-    right: 10rem;
+    right: 8rem;
   }
   .header {
     margin-left: 0px !important;
@@ -480,9 +480,17 @@ body.model_active {
   flex-direction: column;
   gap: 16px;
 }
+.level_section .main-body .form_modal form .row {
+  display: flex;
+  gap: 16px;
+}
+.level_section .main-body .form_modal form .row > * {
+  flex: 1;
+}
 .level_section .main-body .form_modal form .form_item {
   display: flex;
   flex-direction: column;
+  gap: 4px;
 }
 .level_section .main-body .form_modal form input {
   border: 1px solid #adb5bd;

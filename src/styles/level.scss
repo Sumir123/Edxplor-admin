@@ -3,7 +3,7 @@ body {
     overflow-y: hidden;
   }
 }
-.linkIcon{
+.linkIcon {
   cursor: pointer;
 }
 .level_section {
@@ -265,9 +265,17 @@ body {
         display: flex;
         flex-direction: column;
         gap: 16px;
+        .row {
+          display: flex;
+          gap: 16px;
+          & > * {
+            flex: 1;
+          }
+        }
         .form_item {
           display: flex;
           flex-direction: column;
+          gap: 4px;
         }
         input {
           border: 1px solid #adb5bd;

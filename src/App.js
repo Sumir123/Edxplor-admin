@@ -11,6 +11,8 @@ import Province from "./components/Province";
 import District from "./components/District";
 import LocalBodyType from "./components/LocalBodyType";
 import LocalBody from "./components/LocalBody";
+import Students from "./components/students";
+import Colleges from "./components/colllege";
 function App() {
   return (
     <div className="App">
@@ -28,6 +30,8 @@ function App() {
           <Route path="/district" element={<District />} />
           <Route path="/localBodyType" element={<LocalBodyType />} />
           <Route path="/localBody" element={<LocalBody />} />
+          <Route path="/students" element={<Students />} />
+          <Route path="/colleges" element={<Colleges />} />
         </Routes>
       </Router>
     </div>

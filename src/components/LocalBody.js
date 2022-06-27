@@ -69,8 +69,11 @@ const LocalBody = () => {
                   <input type="checkbox" />
                 </th>
                 <th>Country</th>
-                <th>Province(In English)</th>
-                <th>Province(In Nepali)</th>
+                <th>Province</th>
+                <th>District</th>
+                <th>Loal Body Type</th>
+                <th>Loal Body (In English)</th>
+                <th> Loal Body(In Neplali)</th>
                 <th>Status</th>
                 <th>Action</th>
               </tr>
@@ -81,11 +84,15 @@ const LocalBody = () => {
                   <input type="checkbox" />
                 </td>
                 <td> Nepal</td>
-                <td>Bagmati</td>
-                <td>Bagmati</td>
+                <td>Bakgmati</td>
+                <td>Kathmandu</td>
+                <td>Swayambhu </td>
+                <td>Swayambhu </td>
+                <td>Nagarpalika</td>
+
                 <td>
                   <label className="switch">
-                    <input type="checkbox" checked/>
+                    <input type="checkbox" checked />
                     <span className="slider round"></span>
                   </label>
                 </td>
@@ -151,23 +158,42 @@ const LocalBody = () => {
               </button>
             </div>
             <form>
+              <div className="row">
+                <div className="form_item">
+                  <label>Country</label>
+                  <select>
+                    <option>Select Country</option>
+                  </select>
+                </div>
+                <div className="form_item">
+                  <label> Province</label>
+                  <select>
+                    <option>Select Province</option>
+                  </select>
+                </div>
+              </div>
+              <div className="row">
+                <div className="form_item">
+                  <label>District</label>
+                  <select>
+                    <option>Select District</option>
+                  </select>
+                </div>
+                <div className="form_item">
+                  <label> Local Body Type</label>
+                  <select>
+                    <option>Select Local Body Type</option>
+                  </select>
+                </div>
+              </div>
               <div className="form_item">
-                <label>Name</label>
+                <label> Local Body (In English)</label>
                 <input type="text" />
               </div>
+
               <div className="form_item">
-                <label> Faculties</label>
+                <label>Local Body (In Nepali)</label>
                 <input type="text" />
-              </div>
-              <div className="form_item">
-                <label> Levels</label>
-                <select>
-                  <option>Select Level</option>
-                </select>
-              </div>
-              <div className="form_item">
-                <label>Description</label>
-                <textarea />
               </div>
             </form>
             <div className="btns">
