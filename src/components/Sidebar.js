@@ -4,17 +4,31 @@ import { Link } from "react-router-dom";
 const Sidebar = () => {
   const [activeSubMenu, setactiveSubMenu] = useState("");
   const [activeMenu, setactiveMenu] = useState("");
+  var isColapsed = false;
+  const colapseSidebar = () => {
+    // header .menu-name_section level_section
+    isColapsed = !isColapsed;
+    const sidebar = document.querySelector("#sidebar");
+    const header = document.querySelector(".header");
+    const menuNameSection = document.querySelector(".menuNameSection");
+    const level_section = document.querySelector(".level_section");
 
+    if (isColapsed) {
+      sidebar.classList.add("colapse");
+    } else {
+      sidebar.classList.remove("colapse");
+    }
+  };
   return (
     <>
-      <div className="sidebar">
+      <div className="sidebar colapse" id="sidebar">
         <div className="logo">
           <img src="/images/logo.png" alt="" />
           <Link to="/">
             <h1>Edxplor Management System</h1>
           </Link>
         </div>
-        <div className="menus">
+        <div className="menus" id="menus">
           <div className="menu_heading">
             <h3>Master Data</h3>
           </div>
@@ -399,7 +413,12 @@ const Sidebar = () => {
       </div>
       <div className="header">
         <div className="menu_icon">
-          <img src="/images/icon/menu.svg" alt="" />
+          <img
+            src="/images/icon/menu.svg"
+            alt=""
+            className="menuIcon"
+            onClick={colapseSidebar}
+          />
         </div>
         <div className="row-end last">
           <form>
