@@ -1,6 +1,6 @@
 import React from "react";
 
-const Faculties = () => {
+const LocalBody = () => {
   const showModal = () => {
     const modal = document.querySelector("#modal");
     const overlay = document.querySelector("#overlay");
@@ -17,9 +17,9 @@ const Faculties = () => {
   };
   return (
     <>
-        <div className="menu-name_section">
+      <div className="menu-name_section">
         <div className="menu-name">
-          <p>Academic</p>
+          <p>Location</p>
           <div className="row-end menu-last">
             <p className="link">Back to list</p>
             <div className="line">
@@ -47,7 +47,7 @@ const Faculties = () => {
       </div>
       <div className="level_section">
         <div className="section-name">
-          <p>Faculties Details</p>
+          <p>Local Body Details</p>
         </div>
         <div className="search_bar">
           <form>
@@ -68,10 +68,10 @@ const Faculties = () => {
                 <th>
                   <input type="checkbox" />
                 </th>
-                <th>Name</th>
-                <th>Abbreviation</th>
-                <th>University</th>
-                <th>Description</th>
+                <th>Country</th>
+                <th>Province(In English)</th>
+                <th>Province(In Nepali)</th>
+                <th>Status</th>
                 <th>Action</th>
               </tr>
             </thead>
@@ -80,20 +80,25 @@ const Faculties = () => {
                 <td>
                   <input type="checkbox" />
                 </td>
-                <td>University with different faculties and levels </td>
-                <td>BCA</td>
-                <td>PU</td>
-                <td>University with different faculties and levels</td>
+                <td> Nepal</td>
+                <td>Bagmati</td>
+                <td>Bagmati</td>
                 <td>
-                  <img src="/images/icon/3dot.svg" />
+                  <label className="switch">
+                    <input type="checkbox" checked/>
+                    <span className="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <img src="/images/icon/3dot.svg" className="linkIcon" />
                 </td>
               </tr>
             </tbody>
           </table>
           <div className="empty_table">
-            <img src="/images/table_add3.svg" alt="" />
+            <img src="/images/table_add2.svg" alt="" />
             <div className="text">
-              <h5>No Faculties Details</h5>
+              <h5>No Local Body Details</h5>
               <p>Please add details to show.</p>
             </div>
             <div className="add_btn">
@@ -105,11 +110,11 @@ const Faculties = () => {
           </div>
           <div className="table_pagination">
             <div className="list">
-              <p>View</p>
+              <p> View</p>
               <select>
                 <option>10</option>
               </select>
-              <p>per page</p>
+              <p> per page</p>
             </div>
 
             <div className="button row-end">
@@ -151,12 +156,14 @@ const Faculties = () => {
                 <input type="text" />
               </div>
               <div className="form_item">
-                <label>Abbreviation</label>
+                <label> Faculties</label>
                 <input type="text" />
               </div>
               <div className="form_item">
-                <label>University</label>
-                <input type="text" />
+                <label> Levels</label>
+                <select>
+                  <option>Select Level</option>
+                </select>
               </div>
               <div className="form_item">
                 <label>Description</label>
@@ -178,4 +185,4 @@ const Faculties = () => {
   );
 };
 
-export default Faculties;
+export default LocalBody;

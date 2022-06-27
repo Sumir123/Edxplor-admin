@@ -207,6 +207,10 @@ body.model_active {
   overflow-y: hidden;
 }
 
+.linkIcon {
+  cursor: pointer;
+}
+
 .level_section {
   margin-left: 257px;
 }
@@ -290,9 +294,61 @@ body.model_active {
   font-weight: 400;
   font-size: 14px;
   color: #343a40;
+  /* Rounded sliders */
 }
 .level_section .main-body table td:last-child {
   text-align: right;
+}
+.level_section .main-body table td .switch {
+  position: relative;
+  display: inline-block;
+  width: 32px;
+  height: 16px;
+}
+.level_section .main-body table td .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.level_section .main-body table td .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #f8f9fa;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04), 0px 1px 2px rgba(0, 0, 0, 0.08);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.level_section .main-body table td .slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 0px;
+  bottom: 0px;
+  background-color: #adb5bd;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.level_section .main-body table td input:checked + .slider {
+  background-color: #e3f2fd;
+}
+.level_section .main-body table td input:checked + .slider:before {
+  background-color: #1e88e5;
+}
+.level_section .main-body table td input:checked + .slider:before {
+  -webkit-transform: translateX(16px);
+  -ms-transform: translateX(16px);
+  transform: translateX(16px);
+}
+.level_section .main-body table td .slider.round {
+  border-radius: 35px;
+}
+.level_section .main-body table td .slider.round:before {
+  border-radius: 50%;
 }
 .level_section .main-body .empty_table {
   margin-top: 64px;
@@ -382,6 +438,7 @@ body.model_active {
   left: 50%;
   transform: translate(-50%, -50%) scale(0);
   background-color: #ffffff;
+  width: 436px;
 }
 .level_section .main-body .form_modal.active {
   transform: translate(-50%, -50%) scale(1);
@@ -396,6 +453,9 @@ body.model_active {
 }
 .level_section .main-body .form_modal form {
   padding: 12px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 .level_section .main-body .form_modal form .form_item {
   display: flex;
